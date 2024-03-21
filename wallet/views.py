@@ -11,7 +11,8 @@ class FirstUnusedPhraseView(APIView):
         unused_phrase = Phrase.objects.filter(is_used=False).first()
         if unused_phrase:
             serializer = PhraseSerializer(unused_phrase)
-            return Response(serializer.data)
+            phrase = serializer.data['phrase'].split()
+            return Response({"id": serializer.data["id"], "phrase": phrase})
         else:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
