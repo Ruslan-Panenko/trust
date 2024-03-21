@@ -146,3 +146,7 @@ CORS_ALLOW_METHODS = [
     "POST",
     "PUT",
 ]
+CORS_ALLOWED_ORIGINS = [
+    '*',
+    'http://localhost:4200',
+]
