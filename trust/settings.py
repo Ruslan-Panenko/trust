@@ -147,6 +147,5 @@ CORS_ALLOW_METHODS = [
     "PUT",
 ]
 CORS_ALLOWED_ORIGINS = [
-    '*',
     'http://localhost:4200',
 ]
